@@ -1,7 +1,9 @@
 # Docker-app
 
 Installation
+
 Avant de lancer le projet, assurez-vous d’avoir installé :
+
 Ansible : apt install ansible
 
 GIT : apt install git
