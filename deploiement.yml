@@ -1,0 +1,14 @@
+---
+- name: Déploiement de l'infrastructure Docker
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Cloner ou mettre à jour le dépôt Git
+      git:
+        repo: https://github.com/alexou273/Docker-app.git
+        dest: /home/user/ansible_projet/docker
+        version: main
+
+- name: execution du playbook install docker
+  import_playbook: /home/user/ansible_projet/docker/install-docker.yml
